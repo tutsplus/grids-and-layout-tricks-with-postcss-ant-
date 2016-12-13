@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 50px;
+  color: #006ad1;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+body {
+  padding: 30px;
+}
+
+body > * * {
+  background: rgba(30, 144, 255, 0.66);
+  outline: 1px solid rgba(30, 144, 255, 0.75);
+  outline-offset: -1px;
+}
+
+hr {
+  width: 100vw;
+  margin: 30px 0 30px -30px;
+  height: 1px;
+  background: #e6e6e6;
+  border: 0;
+}
+
+
+/**************************/
+
+.nesting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.nesting > *:nth-child(n) {
+  width: auto;
+  height: auto;
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+.nesting > *:nth-child(n + 4) {
+  margin-top: 40px;
+}
+
+.nesting > *:nth-child(3n + 1) {
+  width: calc(99.99% * 18/40 - (20px - 20px * 18/40));
+}
+
+.nesting > *:nth-child(3n + 2),
+.nesting > *:nth-child(3n + 3) {
+  width: calc(99.99% * 11/40 - (20px - 20px * 11/40));
+}
+
+.nesting > *:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+.nesting > *:nth-child(3n + 1),
+.nesting > *:nth-child(3n + 2),
+.nesting > *:nth-child(3n + 3) {
+  height: 200px;
+}
+
+.child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.child > *:nth-child(n) {
+  width: auto;
+  height: auto;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.child > *:nth-child(n + 3) {
+  margin-top: 0;
+}
+
+.child > *:nth-child(2n + 1),
+.child > *:nth-child(2n + 2) {
+  width: calc(99.999999% * 1/2);
+}
+
+.child > *:nth-child(2n + 1) {
+  margin-left: 0;
+}
+
+.child > *:nth-child(2n + 1),
+.child > *:nth-child(2n + 2) {
+  height: 100px;
+}
+
+
+
+
+
+
+
+
+
